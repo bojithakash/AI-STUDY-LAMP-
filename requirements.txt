@@ -1,0 +1,6 @@
+opencv-python
+requests
+python-dotenv
+Pillow
+SpeechRecognition
+pyttsx3
