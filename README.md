@@ -7,7 +7,7 @@ Features
 
 Real-time Video: Displays a live feed from your webcam.
 
-Hands-Free Activation: Continuously listens for a "wake word" ("Okay Gemini").
+Hands-Free Activation: Continuously listens for a "wake word" ("hey ted").
 
 Voice Commands: Uses SpeechRecognition to understand your spoken questions.
 
@@ -29,7 +29,7 @@ Audio Thread: Continuously listens to the microphone.
 
 Main Loop:
 
-When the wake word ("Okay Gemini") is detected, the status changes.
+When the wake word ("hey ted") is detected, the status changes.
 
 It then records your question and grabs the latest video frame.
 
@@ -53,11 +53,7 @@ A Google Gemini API Key
 
 Installation Steps
 
-Clone the Repository:
-
-git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
-cd your-repository-name
-
+Clone the Repository
 
 Get Your Gemini API Key:
 
