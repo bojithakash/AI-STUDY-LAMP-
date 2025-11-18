@@ -1,5 +1,6 @@
 Live AI Voice Assistant for PC
-!
+![AI LAMP](https://github.com/user-attachments/assets/8610322b-73bc-4aec-8cec-0589c0aeb73e)
+
 This repository contains the code for a hands-free, conversational AI assistant that runs on your PC. It uses your webcam to "see" and your microphone to "hear," allowing you to ask questions about your environment in real-time. The assistant is powered by Google's Gemini API and responds to you with a spoken voice.
 This project turns your computer into an "Alexa with eyes," capable of understanding both verbal commands and visual context.
 
