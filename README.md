@@ -124,7 +124,7 @@ A window will pop up showing your webcam feed and the "LISTENING" status.
 
 How to Use
 
-Activate: Say the wake word, "Okay Gemini". The status text will change to "ASK YOUR QUESTION".
+Activate: Say the wake word, "hey ted". The status text will change to "ASK YOUR QUESTION".
 
 Ask: You have a few seconds to ask your question (e.g., "What is this object I'm holding?").
 
