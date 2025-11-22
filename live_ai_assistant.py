@@ -14,8 +14,6 @@ import pyaudio
 import struct
 import speech_recognition as sr
 
-# --- Configuration (FIXED) ---
-# override=True forces it to reload the .env file every time
 load_dotenv(override=True) 
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -29,11 +27,9 @@ if not PICOVOICE_ACCESS_KEY:
 # Print masked key to verify it loaded the NEW one
 print(f"Loaded Picovoice Key: {PICOVOICE_ACCESS_KEY[:10]}... (check if this matches your new key)")
 
-# CORRECT
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
 WAKE_WORD = "hey ted" 
 
-# --- State Management ---
 class AppState:
     def __init__(self):
         self.status = "LISTENING" 
@@ -68,7 +64,6 @@ class TextToSpeech(threading.Thread):
                 app_state.set("SPEAKING")
                 print(f"AI: {text}")
                 
-                # Re-initialize engine per sentence to prevent Windows crashes
                 engine = pyttsx3.init()
                 engine.setProperty('rate', 175) 
                 voices = engine.getProperty('voices')

@@ -7,4 +7,4 @@ step 3: run " pip install -r requirements.txt "
 
 run command :" python live_ai_assistant.py "
 
-say word "tommy" and ask question 
+say word "hey ted" and ask question 

@@ -1,0 +1,56 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.db
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env/
+
+# -----------------------------
+# Environment Variables
+# (contains API keys and secrets)
+# -----------------------------
+.env
+*.env
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# -----------------------------
+# PyInstaller / Build
+# -----------------------------
+*.spec
+dist/
+build/
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# OS Specific
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+logs/
