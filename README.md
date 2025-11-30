@@ -146,7 +146,3 @@ This will help diagnose any problems with your system's text-to-speech drivers.
 PyAudio Errors: Most installation failures are related to PyAudio. Ensure you have installed portaudio (on macOS/Linux) or used the correct .whl file (on Windows).
 
 Microphone Not Working: Ensure your microphone is not muted and that the correct one is set as your system's default. The SpeechRecognition library will print an error if it can't find a microphone.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
