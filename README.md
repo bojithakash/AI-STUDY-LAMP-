@@ -116,8 +116,8 @@ Picovoice Access Key
 🔧 Installation & Setup
 1️⃣ Clone the Repository
 
-     git clone https://github.com/your-username/live-ai-voice-assistant.git
-     cd live-ai-voice-assistant
+     git clone https://github.com/bojithakash/AI-STUDY-LAMP-.git
+     cd AI-STUDY-LAMP-
 
 2️⃣ Create a Virtual Environment
 
