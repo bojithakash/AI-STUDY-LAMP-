@@ -1,148 +1,263 @@
-Live AI Voice Assistant for PC
+🎙️👁️ Live AI Voice Assistant for PC
 ![AI LAMP](https://github.com/user-attachments/assets/8610322b-73bc-4aec-8cec-0589c0aeb73e)
+“An Alexa with Eyes” – A Multimodal Desktop AI Assistant
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🚀 Overview
 
-This repository contains the code for a hands-free, conversational AI assistant that runs on your PC. It uses your webcam to "see" and your microphone to "hear," allowing you to ask questions about your environment in real-time. The assistant is powered by Google's Gemini API and responds to you with a spoken voice.
-This project turns your computer into an "Alexa with eyes," capable of understanding both verbal commands and visual context.
+Live AI Voice Assistant for PC is a hands-free, real-time multimodal AI assistant that can:
 
-Features
+    👂 Listen to your voice
 
-Real-time Video: Displays a live feed from your webcam.
+    👁️ See through your webcam
 
-Hands-Free Activation: Continuously listens for a "wake word" ("hey ted").
+    🧠 Understand context using Google Gemini
 
-Voice Commands: Uses SpeechRecognition to understand your spoken questions.
+    🗣️ Respond with natural speech
 
-Spoken Responses: Uses pyttsx3 for text-to-speech, enabling a full conversational loop.
+This project turns your computer into an “Alexa with Eyes”, capable of answering questions about what it sees around you.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+✨ Key Features
 
-Visual Context: Captures the current video frame when you ask a question and sends it to the AI along with your query.
+✅ Wake Word Activation
+Say “hey ted” to activate the assistant (no keyboard needed)
 
-Powered by Gemini: Leverages the Google Gemini API for powerful multimodal (text + image) understanding.
+✅ Real-Time Vision
+Live webcam feed with visual context sent to the AI
 
-Status Display: The video window shows the assistant's current state: LISTENING, ASK YOUR QUESTION, or PROCESSING.
+✅ Voice Interaction
+Ask questions naturally using your microphone
 
-How It Works
+✅ AI-Powered Responses
+Uses Google Gemini (Multimodal) for text + image understanding
 
-The application runs multiple processes in parallel using Python's multithreading:
+✅ Spoken Replies
+AI responses are spoken aloud using text-to-speech
 
-Video Thread: Continuously captures and displays the webcam feed.
+✅ Status Display
+On-screen status:
 
-Audio Thread: Continuously listens to the microphone.
+LISTENING
 
-Main Loop:
+WAITING_FOR_PROMPT
 
-When the wake word ("hey ted") is detected, the status changes.
+PROCESSING
 
-It then records your question and grabs the latest video frame.
+SPEAKING
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🧠 How It Works
 
-Both the audio (as text) and the image are sent to the Gemini API.
+The system runs multiple components in parallel using multithreading:
 
-The AI's text response is received.
+🔄 System Flow
 
-The response is converted to speech and spoken out loud.
+Video Thread
 
-The assistant returns to the LISTENING state.
+Continuously captures webcam frames
 
-Setup and Installation
+Audio Thread
 
-Prerequisites
+Always listens for the wake word: “hey ted”
+
+After Wake Word
+
+Records your spoken question
+
+Captures the latest camera frame
+
+AI Processing
+
+Sends text + image to Gemini API
+
+Receives AI response
+
+Speech Output
+
+Converts text response into voice
+
+Speaks it out loud
+
+Returns to Listening Mode
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🛠️ Tech Stack
 
 Python 3.7+
 
-A connected webcam and microphone
+OpenCV – Webcam video
 
-A Google Gemini API Key
+SpeechRecognition – Voice input
 
-Installation Steps
+PyAudio – Microphone streaming
 
-Clone the Repository
+Picovoice Porcupine – Wake word detection
 
-Get Your Gemini API Key:
+pyttsx3 – Text-to-Speech
 
-Visit the Google AI Studio website.
+Google Gemini API – Multimodal AI
 
-Create an API key and copy it.
+Multithreading – Real-time performance
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📦 Requirements
+Hardware
 
-Create a Virtual Environment:
+Webcam 📷
 
-Windows:
+Microphone 🎤
 
-python -m venv venv
-.\venv\Scripts\activate
+Internet connection 🌐
 
+Software
 
-macOS/Linux:
+Python 3.7 or higher
 
-python3 -m venv venv
-source venv/bin/activate
+Google Gemini API Key
 
+Picovoice Access Key
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔧 Installation & Setup
+1️⃣ Clone the Repository
 
-Install Dependencies:
-This project has dependencies that require careful installation, especially PyAudio.
+     git clone https://github.com/your-username/live-ai-voice-assistant.git
+     cd live-ai-voice-assistant
 
-Step 4a: Install PyAudio
+2️⃣ Create a Virtual Environment
 
-Windows:
+Windows
 
-Go to the Unofficial Windows Binaries page.
+    python -m venv venv
+    venv\Scripts\activate
 
-Download the .whl file that matches your Python version (e.g., PyAudio‑0.2.14‑cp311‑cp311‑win_amd64.whl for Python 3.11 64-bit).
+macOS / Linux
 
-Install it directly: pip install PyAudio-0.2.14-cp311-cp311-win_amd64.whl
+     python3 -m venv venv
+     source venv/bin/activate
 
-macOS:
+3️⃣ Install PyAudio (Important!)
+🪟 Windows
 
-brew install portaudio
-pip install pyaudio
+Go to Unofficial Windows Binaries
 
+Download the correct .whl file for your Python version
+Example:
 
-Linux:
-
-sudo apt-get install portaudio19-dev python3-pyaudio
-pip install pyaudio
-
-
-Step 4b: Install Other Libraries
-Install the rest of the required packages from the requirements.txt file:
-
-pip install -r requirements.txt
-
-
-Create .env File:
-Create a file named .env in the root of the project folder and add your API key:
-
-GEMINI_API_KEY=YOUR_API_KEY_HERE
+     PyAudio-0.2.14-cp311-cp311-win_amd64.whl
 
 
-How to Run
+Install:
 
-With your virtual environment active, simply run the main script:
+     pip install PyAudio-0.2.14-cp311-cp311-win_amd64.whl
 
-python live_ai_assistant.py
+🍎 macOS
+
+     brew install portaudio
+     pip install pyaudio
+
+🐧 Linux
+
+     sudo apt-get install portaudio19-dev python3-pyaudio
+     pip install pyaudio
+
+4️⃣ Install Remaining Dependencies
+ 
+      pip install -r requirements.txt
+
+requirements.txt
+opencv-python
+requests
+python-dotenv
+Pillow
+SpeechRecognition
+pyttsx3
+
+5️⃣ Create .env File
+
+Create a file named .env in the project root:
+
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+PICOVOICE_ACCESS_KEY=YOUR_PICOVOICE_ACCESS_KEY_HERE
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+▶️ Running the Assistant
+
+With the virtual environment activated:
+
+     python live_ai_assistant.py
 
 
-A window will pop up showing your webcam feed and the "LISTENING" status.
+✔️ A webcam window will appear
+✔️ Status will show LISTENING
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🗣️ How to Use
 
-How to Use
+Activate
+Say 👉 “hey ted”
 
-Activate: Say the wake word, "hey ted". The status text will change to "ASK YOUR QUESTION".
+Ask a Question
+Example:
 
-Ask: You have a few seconds to ask your question (e.g., "What is this object I'm holding?").
+“What is this object?”
 
-Process: The status will change to "PROCESSING" as it sends the data to the API.
+“What color is this?”
 
-Listen: The assistant will speak its response. The answer will also be printed in your terminal.
+Processing
+Status changes to PROCESSING
 
-Quit: To stop the application, click on the video window and press the 'q' key.
+Listen
+AI replies with a spoken response
 
-Troubleshooting
+Quit
+Press q on the video window
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🧪 Troubleshooting
+🔊 No Voice Output
 
-No Voice Output: If the assistant doesn't speak, your pyttsx3 engine may have issues. Run the test_tts.py script to debug:
+Run the TTS test:
 
-python test_tts.py
+     python test_tts.py
 
 
-This will help diagnose any problems with your system's text-to-speech drivers.
+Ensure:
 
-PyAudio Errors: Most installation failures are related to PyAudio. Ensure you have installed portaudio (on macOS/Linux) or used the correct .whl file (on Windows).
+System speakers are working
 
-Microphone Not Working: Ensure your microphone is not muted and that the correct one is set as your system's default. The SpeechRecognition library will print an error if it can't find a microphone.
+TTS drivers are available
+
+🎙️ Microphone Not Working
+
+Check system default microphone
+
+Ensure it is not muted
+
+Run:
+
+     python -m speech_recognition
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+⚠️ PyAudio Installation Errors
+
+Make sure PortAudio is installed
+
+Windows users must use the correct .whl file
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🌟 Future Improvements
+
+🧠 Memory & conversation history
+
+🖥️ GUI dashboard
+
+🤖 ROS2 integration
+
+🔌 Offline speech models
+
+📱 Mobile / IoT companion mode
+
+🙌 Credits
+
+Google Gemini API
+
+Picovoice Porcupine
+
+OpenCV
+
+Python Open-Source Community
+
+📜 License
+
+This project is open-source and intended for learning, research, and innovation.
