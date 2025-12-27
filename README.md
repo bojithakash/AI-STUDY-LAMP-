@@ -1,4 +1,4 @@
-🎙️👁️ Live AI Voice Assistant for PC
+Live AI Voice Assistant for PC
 ![AI LAMP](https://github.com/user-attachments/assets/8610322b-73bc-4aec-8cec-0589c0aeb73e)
 “An Alexa with Eyes” – A Multimodal Desktop AI Assistant
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
