@@ -242,8 +242,6 @@ Windows users must use the correct .whl file
 
 🖥️ GUI dashboard
 
-🤖 ROS2 integration
-
 🔌 Offline speech models
 
 📱 Mobile / IoT companion mode
