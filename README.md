@@ -4,6 +4,16 @@ Live AI Voice Assistant for PC
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🚀 Overview
 
+
+
+
+https://github.com/user-attachments/assets/493bdc4e-c4de-424d-b16a-fbdad932bfd2
+
+
+
+
+
+
 Live AI Voice Assistant for PC is a hands-free, real-time multimodal AI assistant that can:
 
     👂 Listen to your voice
